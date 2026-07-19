@@ -30,7 +30,7 @@ function Signup() {
     let userdetails = { username, password, email, role };
 
     try {
-      let result = await fetch('http://localhost:3500/auth/register', {
+      let result = await fetch('https://mern-backend-1-sl9r.onrender.com', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
