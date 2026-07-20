@@ -7,7 +7,7 @@ function Products({ searchquery }) {
 
  useEffect(() => {
 
-  fetch('https://ecom-backened.onrender.com/products')
+  fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
     .then(data => setproducts(data))
     .catch(error => console.log(error))
