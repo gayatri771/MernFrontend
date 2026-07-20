@@ -1,4 +1,4 @@
-import Header from './Header';
+import Header from './header';
 
 import { Route, Routes,Navigate} from 'react-router-dom';
 
