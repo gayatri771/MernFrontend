@@ -30,7 +30,6 @@ function Signup() {
     let userdetails = { username, password, email, role };
 
     try {
-      let result = await fetch('try {
       let result = await fetch('https://mernbackend-uaq6.onrender.com', {
         method: 'POST',
         headers: {', {
