@@ -31,7 +31,7 @@ function Signup() {
 
     try {
       let result = await fetch('try {
-      let result = await fetch('https://mern-backend-1-sl9r.onrender.com', {
+      let result = await fetch('https://mernbackend-uaq6.onrender.com', {
         method: 'POST',
         headers: {', {
         method: 'POST',
