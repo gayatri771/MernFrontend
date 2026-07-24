@@ -3,6 +3,7 @@ import { z } from "zod";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
   const [email, setemail] = useState('');
