@@ -48,7 +48,7 @@ let onsubmit = async (event) => {
    let finalresponse = await result.json();
     if (result.ok) {
     alert(finalresponse.msg);
-    navigate("/login");
+    navigate("/Login");
   } else {
     alert(finalresponse.msg);
   }
