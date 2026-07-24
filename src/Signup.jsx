@@ -32,7 +32,7 @@ function Signup() {
     try {
       let result = await fetch('https://mernbackend-uaq6.onrender.com', {
         method: 'POST',
-        headers: {', {
+        headers:{
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
