@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [username, setusername] = useState('');
