@@ -44,8 +44,13 @@ let onsubmit = async (event) => {
       body: JSON.stringify(userdetails),
     });
 
-    let finalresponse = await result.json();
+   let finalresponse = await result.json();
+    if (result.ok) {
     alert(finalresponse.msg);
+    navigate("/login");
+  } else {
+    alert(finalresponse.msg);
+  }
   } catch (error) {
     console.error(error);
     alert("Registration failed");
