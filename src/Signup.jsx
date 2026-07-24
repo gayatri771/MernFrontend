@@ -24,29 +24,33 @@ function Signup() {
     return result.error.issues[0].message;
   }
 
-  let onsubmit = async (event) => {
-    event.preventDefault();
+let onsubmit = async (event) => {
+  event.preventDefault();
 
-    let userdetails = { username, password, email, role };
-
-    try {
-      let result = await fetch('https://mernbackend-uaq6.onrender.com', {
-        method: 'POST',
-        headers:{
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userdetails)
-      });
-      let finalresponse = await result.json();
-      alert(`${finalresponse.msg}`);
-    } catch (error) {
-      console.error(error);
-      alert("Registration failed");
-    }
+  let userdetails = {
+    username,
+    password,
+    email,
+    role,
   };
 
+  try {
+    let result = await fetch("https://mernbackend-uaq6.onrender.com/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userdetails),
+    });
+
+    let finalresponse = await result.json();
+    alert(finalresponse.msg);
+  } catch (error) {
+    console.error(error);
+    alert("Registration failed");
+  }
+};
+  
   return (
     <>
       <div style={{ maxWidth: '400px', margin: '50px auto', padding: '30px', border: '1px solid #ccc', borderRadius: '8px', textAlign: "center" }} className="login-container">
