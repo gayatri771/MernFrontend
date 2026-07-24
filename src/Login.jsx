@@ -14,7 +14,7 @@ function Login() {
 
    let token= localStorage.getItem("token")
     
-    let response=await fetch('http://localhost:3500/auth/login',{
+    let response=await fetch('https://mernbackend-uaq6.onrender.com/auth/Login',{
        method:'POST',
        headers:{
          "Content-Type": "application/json",
