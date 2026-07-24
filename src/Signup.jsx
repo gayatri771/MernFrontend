@@ -35,7 +35,7 @@ let onsubmit = async (event) => {
   };
 
   try {
-    let result = await fetch("https://mernbackend-uaq6.onrender.com"/auth/register,{
+    let result = await fetch("https://mernbackend-uaq6.onrender.com/auth/register",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
