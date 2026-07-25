@@ -5,14 +5,17 @@ function Products({ searchquery }) {
 
   const [products, setproducts] = useState([]);
 
- useEffect(() => {
+useEffect(() => {
 
   fetch("https://dummyjson.com/products?limit=194")
-  .then(res => res.json())
-  .then(data => console.log(data.products));
-  .catch(error => console.log(error))
+    .then(res => res.json())
+    .then(data => {
+      console.log(data.products);
+      setproducts(data.products);
+    })
+    .catch(error => console.log(error));
 
-}, [])
+}, []);
 
 
   let filteredproducts = products.filter((p) => {
