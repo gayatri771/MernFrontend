@@ -7,7 +7,7 @@ function Products({ searchquery }) {
 
  useEffect(() => {
 
-  fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=100')
+  fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=300')
     .then(response => response.json())
     .then(data => setproducts(data))
     .catch(error => console.log(error))
