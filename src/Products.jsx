@@ -9,7 +9,10 @@ function Products({ searchquery }) {
 
   fetch('https://api.escuelajs.co/api/v1/products')
     .then(response => response.json())
-    .then(data => setproducts(data))
+    .then(data => {
+      console.log(data[0]);
+      setproducts(data);
+    })
     .catch(error => console.log(error))
 
 }, [])
@@ -34,7 +37,7 @@ function Products({ searchquery }) {
         filteredproducts.map((e) => {
           return (
             <Card
-              image={e.image[0]}
+              image={e.images[0]}
               title={e.title}
               price={e.price}
             />
