@@ -7,13 +7,10 @@ function Products({ searchquery }) {
 
  useEffect(() => {
 
-  fetch('https://api.escuelajs.co/api/v1/products')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data[0]);
-      setproducts(data);
-    })
-    .catch(error => console.log(error))
+  fetch("https://dummyjson.com/products?limit=194")
+  .then(res => res.json())
+  .then(data => console.log(data.products));
+  .catch(error => console.log(error))
 
 }, [])
 
@@ -37,7 +34,7 @@ function Products({ searchquery }) {
         filteredproducts.map((e) => {
           return (
             <Card
-              image={e.images[0]}
+              image={e.thumbnail}
               title={e.title}
               price={e.price}
             />
