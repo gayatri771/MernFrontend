@@ -7,7 +7,7 @@ function Products({ searchquery }) {
 
  useEffect(() => {
 
-  fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=300')
+  fetch('https://api.escuelajs.co/api/v1/products')
     .then(response => response.json())
     .then(data => setproducts(data))
     .catch(error => console.log(error))
@@ -34,7 +34,7 @@ function Products({ searchquery }) {
         filteredproducts.map((e) => {
           return (
             <Card
-              image={e.image}
+              image={e.image[0]}
               title={e.title}
               price={e.price}
             />
