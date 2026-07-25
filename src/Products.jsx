@@ -34,7 +34,7 @@ function Products({ searchquery }) {
         filteredproducts.map((e) => {
           return (
             <Card
-              image={e.image[0]}
+              image={e.image}
               title={e.title}
               price={e.price}
             />
