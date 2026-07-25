@@ -7,7 +7,7 @@ function Products({ searchquery }) {
 
  useEffect(() => {
 
-  fetch('https://fakestoreapi.com/products')
+  fetch('https://api.escuelajs.co/api/v1/products')
     .then(response => response.json())
     .then(data => setproducts(data))
     .catch(error => console.log(error))
